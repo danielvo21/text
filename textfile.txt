@@ -1,0 +1,42 @@
+int main(int argc, char** argv){
+
+	int Factorial(int n)
+	{
+		int fact = 1;
+
+		for (int i = 1; i < n; i++){
+			fact *= i;
+		}
+
+		return fact;
+	}
+
+
+	unsigned int Factorial2(unsigned int num){
+		if (num>1){
+			return num *  Factorial2(num - 1);
+		}
+
+		else { return 1; }
+	}
+
+	unsigned int Factorial3(unsigned int num){
+		return (num > 1) ? num*Factorial3(num - 1) : 1;
+	}
+
+	/*
+	int Factorial2(int n){
+	fact = 1;
+	if (i < n){
+	n = n*(n - i);
+	Factorial2(n);
+	fact = n;
+	}
+	else {
+	return fact;
+	}
+
+	}*/
+
+	Factorial(2);
+}
